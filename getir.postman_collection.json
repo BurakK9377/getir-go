@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "58e982af-0f92-498e-bab2-3063267a6841",
+		"name": "getir",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MongoDbGetRecords",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\" : \"2015-12-12\",\n    \"endDate\" : \"2022-12-12\",\n    \"minCount\" : 10,\n    \"maxCount\" : 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://getir-go-burak.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"getir-go-burak",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveInMemory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\" : \"getirTest\",\n    \"value\" :  \"success2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://getir-go-burak.herokuapp.com/in-memory",
+					"protocol": "https",
+					"host": [
+						"getir-go-burak",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"in-memory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFromInMemory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://getir-go-burak.herokuapp.com/in-memory?key=getirTest",
+					"protocol": "https",
+					"host": [
+						"getir-go-burak",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"in-memory"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "getirTest"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
