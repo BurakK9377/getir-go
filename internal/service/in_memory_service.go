@@ -35,7 +35,7 @@ func GetInMemoryKey(w http.ResponseWriter, r *http.Request) {
 	var value string
 	err := redisClient.GetKey(key, &value)
 	if err != nil {
-		getError(err, w, http.StatusNoContent)
+		getError(err, w, http.StatusNotFound)
 		return
 	}
 	inMemoryResponse := memory2.InMemoryResponse{
