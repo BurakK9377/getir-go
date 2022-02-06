@@ -19,7 +19,6 @@ type Configuration struct {
 }
 
 // ConnectDB : This is service function to connect mongoDB
-// If you want to export your function. You must to start upper case function name. Otherwise you won't see your function when you import that on other class.
 func ConnectDB() *mongo.Collection {
 	config := GetConfiguration()
 	// Set client options
